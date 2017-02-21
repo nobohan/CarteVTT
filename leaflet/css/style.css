@@ -1,0 +1,33 @@
+/**
+ * CSS Reset
+ * From Blueprint reset.css
+ * http://blueprintcss.googlecode.com
+ */
+
+a:hover{ 
+	color: orange;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+div#popup {
+	font-size: small;
+	font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+	color: rgb(25, 25, 25);
+	text-align: center;
+}
+
+div#popup_wp {
+	font-size: small;
+        font-weight: bold;
+	font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+	color: rgb(25, 25, 25);
+	text-align: center;
+}
+
+div#popup_partner {
+	font-size: x-small;
+	font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+	color: rgb(81, 81, 81);
+	text-align: center;
+}
