@@ -1,8 +1,49 @@
-/**
- * CSS Reset
- * From Blueprint reset.css
- * http://blueprintcss.googlecode.com
- */
+
+body{
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+div#list{
+   position: absolute;
+   top: 0.5em;
+   left: -1em;    
+}
+
+div#list ul{
+   list-style-type: none;
+
+}
+
+div#list li{
+	padding: 0.4em;
+}
+
+div#list span{
+   border-radius: 4px;
+   padding: 6px 12px;  
+   vertical-align: middle;
+   font-size: 14px;
+   font-weight: normal;
+   line-height: 1.42857143;
+   text-align: center;
+   white-space: nowrap;
+}
+
+li#vtt10km span{
+   background-color: #1b9e77;
+}
+li#vtt20km span{
+   background-color: #d95f02;
+}
+li#vtt27km span{
+   background-color: #7570b3;
+}
+li#vtt39km span{
+   background-color: #e7298a;
+}
+li#vtt54km span{
+   background-color: #66a61e;
+}
 
 a:hover{ 
 	color: orange;
@@ -12,22 +53,15 @@ a:hover{
 
 div#popup {
 	font-size: small;
-	font-family: 'Open Sans',Arial,Helvetica,sans-serif;
 	color: rgb(25, 25, 25);
 	text-align: center;
 }
 
 div#popup_wp {
 	font-size: small;
-        font-weight: bold;
-	font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+   font-weight: bold;
 	color: rgb(25, 25, 25);
 	text-align: center;
 }
 
-div#popup_partner {
-	font-size: x-small;
-	font-family: 'Open Sans',Arial,Helvetica,sans-serif;
-	color: rgb(81, 81, 81);
-	text-align: center;
-}
+
