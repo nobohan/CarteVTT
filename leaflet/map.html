@@ -6,7 +6,7 @@
     <meta name="robots" content="index,follow" /> 
     <meta name="author" content="julien" , julien_wa@yahoo.fr />
     <link rel="stylesheet" href="css/style.css" type="text/css" /> 
-    <link rel="stylesheet" href="lib/leaflet.css" />
+    <link rel="stylesheet" href="lib/leaflet/leaflet.css" />
     <link rel="stylesheet" href="lib/bootstrap-3.3.6-dist/css/bootstrap.css">
   </head>
   <body style="height:100%;" onload="init()"> 
@@ -15,27 +15,27 @@
       <ul>
         <li id="vtt10km">
           <span>10 km</span>
-          <button class="btn" onclick="javascript:toggleLayer10km();">ON</button>
+          <span><a target="_blank" onclick="javascript:toggleLayer10km();">ON</a></span>
           <span><a target="_blank" href="gpx/VTT Marbehan 10km.gpx">GPX</a></span>
         </li>
         <li id="vtt20km">
           <span >20 km</span>
-          <button class="btn" onclick="javascript:toggleLayer20km();">ON</button>
+          <span><a target="_blank" onclick="javascript:toggleLayer20km();">ON</a></span>
           <span><a target="_blank" href="gpx/VTT Marbehan 20km.gpx">GPX</a></span>
         </li>
         <li id="vtt27km">
           <span >27 km</span>
-          <button class="btn" onclick="javascript:toggleLayer27km();">ON</button>
+          <span><a target="_blank" onclick="javascript:toggleLayer27km();">ON</a></span>
           <span><a target="_blank" href="gpx/VTT Marbehan 27km.gpx">GPX</a></span>
         </li>
         <li id="vtt39km">
           <span >39 km</span>
-          <button class="btn" onclick="javascript:toggleLayer39km();">ON</button>
+          <span><a target="_blank" onclick="javascript:toggleLayer39km();">ON</a></span>
           <span><a target="_blank" href="gpx/VTT Marbehan 39km.gpx">GPX</a></span>
         </li>
         <li id="vtt54km">
           <span >54 km</span>
-          <button class="btn" onclick="javascript:toggleLayer54km();">ON</button>
+          <span><a target="_blank"  onclick="javascript:toggleLayer54km();">ON</a></span>
           <span><a target="_blank" href="gpx/VTT Marbehan 54km.gpx">GPX</a></span>
         </li>
       </ul>    
@@ -53,9 +53,8 @@
     </script>
     <script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="lib/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
-    <script src="lib/leaflet.js"></script>
-    <script type="text/javascript" src="map.js" ></script> 
-    <script type="text/javascript" src="geojson/4filsAymon.geojson.js"></script> 
+    <script src="lib/leaflet/leaflet.js"></script>
+    <script type="text/javascript" src="map.js"></script> 
     <script type="text/javascript" src="geojson/MarbehanVTT_10km.geojson.js"></script> 
     <script type="text/javascript" src="geojson/MarbehanVTT_20km.geojson.js"></script>
     <script type="text/javascript" src="geojson/MarbehanVTT_27km.geojson.js"></script>

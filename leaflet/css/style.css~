@@ -6,8 +6,7 @@ body{
 div#list{
    position: absolute;
    top: 0.5em;
-   left: -1em; 
-   z-index: 10000;   
+   left: -1em;    
 }
 
 div#list ul{

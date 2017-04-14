@@ -8,7 +8,7 @@ var layer39km_visible = true;
 var layer54km_visible = true;
    
 function init() {
-	Lmap = L.map('map').setView([49.73, 5.58], 13);
+	Lmap = L.map('map').setView([49.775, 5.496], 12);
 	
 	// add an OpenStreetMap tile layer
 	/*var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -35,80 +35,83 @@ function init() {
 	
 	
 	// add GeoJSON layer
- 	var style10km = {
-       "color": '#1b9e77',
-       "weight": 5,
-       "opacity": 0.75
-   };	
-	layer10km = L.geoJson(vtt10km, {
-		 style : style10km, 
-	    onEachFeature: function (feature, layer) {
-		    layer.bindPopup("<div id='popup'>VTT 10 km</div><div id='popup_wp'>Téléchargez la trace GPX</div>");
-	    }
-	}).addTo(Lmap);	
-	
-   var style20km = {
-       "color": '#d95f02',
-       "weight": 5,
-       "opacity": 0.75
-   };	
-	layer20km = L.geoJson(vtt20km, {
-		 style : style20km, 
-	    onEachFeature: function (feature, layer) {
-		    layer.bindPopup("<div id='popup'>VTT 20 km</div><div id='popup_wp'>Téléchargez la trace GPX</div>");
-	    }
-	}).addTo(Lmap);
-	
-	var style27km = {
-       "color": "#7570b3",
-       "weight": 5,
-       "opacity": 0.75
-   };	
-	layer27km = L.geoJson(vtt27km, {
-		 style : style27km, 
-	    onEachFeature: function (feature, layer) {
-		    layer.bindPopup("<div id='popup'>VTT 27 km</div><div id='popup_wp'>Téléchargez la trace GPX</div>");
-	    }
-	}).addTo(Lmap);
-	
- 	var style39km = {
-       "color": "#e7298a",
-       "weight": 5,
-       "opacity": 0.75
-   };	
-	layer39km = L.geoJson(vtt39km, {
-		 style : style39km, 
-	    onEachFeature: function (feature, layer) {
-		    layer.bindPopup("<div id='popup'>VTT 39 km</div><div id='popup_wp'>Téléchargez la trace GPX</div>");
-	    }
-	}).addTo(Lmap);
-	
+
 	var style54km = {
-       "color": "#66a61e",
-       "weight": 5,
-       "opacity": 0.75
+       "color": "#2E2E2E",
+       "weight": 8,
+       "opacity": 0.70
    };	
 	layer54km = L.geoJson(vtt54km, {
 		 style : style54km, 
-	    onEachFeature: function (feature, layer) {
+	    /*onEachFeature: function (feature, layer) {
 		    layer.bindPopup("<div id='popup'>VTT 54 km</div><div id='popup_wp'>Téléchargez la trace GPX</div>");
-	    }
+	    }*/
 	}).addTo(Lmap);
+ 
+  	var style39km = {
+       "color": "#e7298a",
+       "weight": 8,
+       "opacity": 0.70
+   };	
+	layer39km = L.geoJson(vtt39km, {
+		 style : style39km, 
+	    /*onEachFeature: function (feature, layer) {
+		    layer.bindPopup("<div id='popup'>VTT 39 km</div><div id='popup_wp'>Téléchargez la trace GPX</div>");
+	    }*/
+	}).addTo(Lmap); 
+ 
+ 	var style27km = {
+       "color": "#7570b3",
+       "weight": 8,
+       "opacity": 0.70
+   };	
+	layer27km = L.geoJson(vtt27km, {
+		 style : style27km, 
+	    /*onEachFeature: function (feature, layer) {
+		    layer.bindPopup("<div id='popup'>VTT 27 km</div><div id='popup_wp'>Téléchargez la trace GPX</div>");
+	    }*/
+	}).addTo(Lmap);
+ 
+   var style20km = {
+       "color": '#d95f02',
+       "weight": 8,
+       "opacity": 0.70
+   };	
+	layer20km = L.geoJson(vtt20km, {
+		 style : style20km, 
+	    /*onEachFeature: function (feature, layer) {
+		    layer.bindPopup("<div id='popup'>VTT 20 km</div><div id='popup_wp'>Téléchargez la trace GPX</div>");
+	    }*/
+	}).addTo(Lmap); 
+ 
+ 	var style10km = {
+       "color": '#FFBF00',
+       "weight": 8,
+       "opacity": 0.70
+   };	
+	layer10km = L.geoJson(vtt10km, {
+		 style : style10km, 
+	    /*onEachFeature: function (feature, layer) {
+		    layer.bindPopup("<div id='popup'>VTT 10 km</div><div id='popup_wp'>Téléchargez la trace GPX</div>");
+	    }*/
+	}).addTo(Lmap);//.bindTooltip("10 km").openTooltip();;	
 		
+	// Add start marker	
+	L.marker([49.72710,5.53225]).addTo(Lmap).bindPopup('<div id="popup"><b>Départ</b><p>Ecole communale de Marbehan - Rue de la Rivière 37 - 6724 MARBEHAN<p></div>');
 }
-
 
 function toggleLayer10km() {	
 	if (layer10km_visible === true){
 		layer10km_visible = false; 
       Lmap.removeLayer(layer10km);
       // change button state
-      $('li#vtt10km')[0].children[1].innerHTML = 'OFF';
+      $('li#vtt10km')[0].children[1].children[0].innerHTML = 'OFF';
    }else{
+   	console.log('false')
       layer10km_visible = true; 
       Lmap.addLayer(layer10km);
       // change button state
-      $('li#vtt10km')[0].children[1].innerHTML = 'ON';  
+      $('li#vtt10km')[0].children[1].children[0].innerHTML = 'ON';  
    }
 }      
 
@@ -117,12 +120,12 @@ function toggleLayer20km() {
 		layer20km_visible = false; 
       Lmap.removeLayer(layer20km);
       // change button state
-      $('li#vtt20km')[0].children[1].innerHTML = 'OFF';
+      $('li#vtt20km')[0].children[1].children[0].innerHTML = 'OFF';
    }else{
       layer20km_visible = true; 
       Lmap.addLayer(layer20km);
       // change button state
-      $('li#vtt20km')[0].children[1].innerHTML = 'ON';  
+      $('li#vtt20km')[0].children[1].children[0].innerHTML = 'ON';  
    }
 } 
 
@@ -131,12 +134,12 @@ function toggleLayer27km() {
 		layer27km_visible = false; 
       Lmap.removeLayer(layer27km);
       // change button state
-      $('li#vtt27km')[0].children[1].innerHTML = 'OFF';
+      $('li#vtt27km')[0].children[1].children[0].innerHTML = 'OFF';
    }else{
       layer27km_visible = true; 
       Lmap.addLayer(layer27km);
       // change button state
-      $('li#vtt27km')[0].children[1].innerHTML = 'ON';  
+      $('li#vtt27km')[0].children[1].children[0].innerHTML = 'ON';  
    }
 } 
 
@@ -145,12 +148,12 @@ function toggleLayer39km() {
 		layer39km_visible = false; 
       Lmap.removeLayer(layer39km);
       // change button state
-      $('li#vtt39km')[0].children[1].innerHTML = 'OFF';
+      $('li#vtt39km')[0].children[1].children[0].innerHTML = 'OFF';
    }else{
       layer39km_visible = true; 
       Lmap.addLayer(layer39km);
       // change button state
-      $('li#vtt39km')[0].children[1].innerHTML = 'ON';  
+      $('li#vtt39km')[0].children[1].children[0].innerHTML = 'ON';  
    }
 } 
 
@@ -159,29 +162,26 @@ function toggleLayer54km() {
 		layer54km_visible = false; 
       Lmap.removeLayer(layer54km);
       // change button state
-      $('li#vtt54km')[0].children[1].innerHTML = 'OFF';
+      $('li#vtt54km')[0].children[1].children[0].innerHTML = 'OFF';
    }else{
       layer54km_visible = true; 
       Lmap.addLayer(layer54km);
       // change button state
-      $('li#vtt54km')[0].children[1].innerHTML = 'ON';  
+      $('li#vtt54km')[0].children[1].children[0].innerHTML = 'ON';  
    }
 } 
-
-
-
 
 
 /*function toggleLayer(distance) {
 	var layer = 'layer' + distance + 'km';
 	var layer_visibility = layer + '_visible';
-	var li = 'vtt' + distance + 'km';
+	var li = 'li#vtt' + distance + 'km';
 	
 	if (eval(layer_visibility) === true){
 		//eval(layer_visibility) = false; 
       Lmap.removeLayer(eval(layer));
       // change button state
-      var truc = $(eval(li))[0].innerHTML 
+      var truc = $(eval(li))[0].children[1].children[0].innerHTML = 'OFF';
       console.log(truc)
    }else{
       //eval(layer_visibility) = true; 
