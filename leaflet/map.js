@@ -11,9 +11,9 @@ function init() {
 	Lmap = L.map('map').setView([49.775, 5.496], 12);
 	
 	// add an OpenStreetMap tile layer
-	/*var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+	var osm = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(Lmap);
+    }).addTo(Lmap); 
 	
    /*var baseLayer = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.{ext}', {
 	      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Icons from <a href="https://mapicons.mapsmarker.com">Maps Icons Collection</a>',
@@ -24,10 +24,10 @@ function init() {
    }).addTo(map);*/
 	
 	
-   var OpenTopoMap = L.tileLayer('http://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+  /* var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 	   maxZoom: 17,
 	   attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-   }).addTo(Lmap);	
+   }).addTo(Lmap);*/	
 	
    // Put the zoom icon on the top right of the map
    Lmap.zoomControl.setPosition('topright')	
