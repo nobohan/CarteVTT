@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="title" content="VTT Marbehan 2019 PPA-free" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="julien minet" , juminet@gmail.com />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="lib/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="lib/bootstrap-3.3.6-dist/css/bootstrap.css">
+  </head>
+  <body style="height:100%;" onload="init()">
+    <div style="width:100%; height:100%;" id="map"></div>
+    <div id="list">
+      <ul>
+        <li id="vtt28km">
+          <span >28 km</span>
+          <span><a target="_blank" onclick="javascript:toggleLayer28km();">ON</a></span>
+          <span><a target="_blank" href="gpx/marbehan_28km.gpx">GPX</a></span>
+        </li>
+        <li id="vtt32km">
+          <span>32 km</span>
+          <span><a target="_blank" onclick="javascript:toggleLayer32km();">ON</a></span>
+          <span><a target="_blank" href="gpx/marbehan_32km.gpx">GPX</a></span>
+        </li>
+        <li id="vtt42km">
+          <span>42 km</span>
+          <span><a target="_blank" onclick="javascript:toggleLayer42km();">ON</a></span>
+          <span><a target="_blank" href="gpx/marbehan_42km.gpx">GPX</a></span>
+        </li>
+        <li id="vtt56km">
+          <span >56 km</span>
+          <span><a target="_blank"  onclick="javascript:toggleLayer56km();">ON</a></span>
+          <span><a target="_blank" href="gpx/marbehan_56km.gpx">GPX</a></span>
+        </li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25564161-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+    </script>
+    <script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+    <script src="lib/leaflet/leaflet.js"></script>
+    <script type="text/javascript" src="geojson/marbehan_28km.geojson"></script>
+    <script type="text/javascript" src="geojson/marbehan_32km.geojson"></script>
+    <script type="text/javascript" src="geojson/marbehan_41km.geojson"></script>
+    <script type="text/javascript" src="geojson/marbehan_42km.geojson"></script>
+    <script type="text/javascript" src="geojson/marbehan_56km.geojson"></script>
+    <script type="text/javascript" src="map.js"></script>
+
+  </body>
+</html>
