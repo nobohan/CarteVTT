@@ -121,7 +121,7 @@ function toggleLayer42km() {
       // change button state
       $('li#vtt42km')[0].children[1].children[0].innerHTML = 'OFF';
    }else{
-      layer41km_visible = true;
+      layer42km_visible = true;
       Lmap.addLayer(layer42km);
       // change button state
       $('li#vtt42km')[0].children[1].children[0].innerHTML = 'ON';
